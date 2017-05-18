@@ -6,6 +6,7 @@ It has:
 * .env file support
 * wsgi support
 * some helper
+* Support for migrations see [Flask-Migrate](https://flask-migrate.readthedocs.io/en/)
 
 In order to use this scaffolding set the .env file (you can copy one of examples)
 

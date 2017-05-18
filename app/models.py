@@ -1,14 +1,15 @@
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, AnonymousUserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask_migrate import Migrate
 
 db = SQLAlchemy()
-
+migrate = Migrate(db=db)
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer(), primary_key=True)
-    username = db.Column(db.String())
-    password = db.Column(db.String())
+    username = db.Column(db.String(255))
+    password = db.Column(db.String(255))
 
     def __init__(self, username, password):
         self.username = username

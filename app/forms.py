@@ -16,8 +16,10 @@ class LoginForm(Form):
         if not check_validate:
             return False
 
+
         # Does our the exist
         user = User.query.filter_by(username=self.username.data).first()
+
         if not user:
             self.username.errors.append('Invalid username or password')
             return False
@@ -26,5 +28,4 @@ class LoginForm(Form):
         if not user.check_password(self.password.data):
             self.username.errors.append('Invalid username or password')
             return False
-
         return True

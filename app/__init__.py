@@ -5,7 +5,7 @@ from flask_dotenv import DotEnv
 from webassets.loaders import PythonLoader as PythonAssetsLoader
 
 from app import assets
-from app.models import db
+from app.models import db, migrate
 from app.controllers.main import main
 import os
 import app.helpers.fs as fs
@@ -50,6 +50,8 @@ def create_app():
     db.init_app(app)
 
     login_manager.init_app(app)
+
+    migrate.init_app(app)
 
     # Import and register the different asset bundles
     assets_env.init_app(app)
