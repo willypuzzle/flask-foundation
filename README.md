@@ -2,7 +2,14 @@
 
 This is a Flask foundation scaffolding to help building Flask python application. It is based on [Flask Foundation](https://github.com/JackStouffer/Flask-Foundation) but modified.
 
+It has:
+* .env file support
+* wsgi support
+* some helper
+
+In order to use this scaffolding set the .env file (you can copy one of examples)
+
 ## License
 
-Password Manager is licensed under the BSD license. For more info see LICENSE.md
+Flask foundation is licensed under the BSD license. For more info see LICENSE.md
 
