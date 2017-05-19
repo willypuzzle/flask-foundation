@@ -3,9 +3,9 @@
 This is a Flask foundation scaffolding to help building Flask python application. It is based on [Flask Foundation](https://github.com/JackStouffer/Flask-Foundation) but modified.
 
 It has:
-* .env file support
+* .env file support (It loads everything there is in .env file in app.config)
 * wsgi support
-* some helper
+* some helper (with log helper)
 * Support for migrations see [Flask-Migrate](https://flask-migrate.readthedocs.io/en/)
 
 In order to use this scaffolding set the .env file (you can copy one of examples)
