@@ -6,7 +6,7 @@ from flask_script import Manager, Server
 from flask_script.commands import ShowUrls, Clean
 
 from app.application import create
-from app.models import db, User
+from app.modules.auth.models import db, User
 
 # default to dev config because no one should use this in
 # production anyway

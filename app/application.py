@@ -7,6 +7,3 @@ def create():
     if _app == None:
         _app = create_app()
     return _app;
-
-def instance():
-    return _app;
