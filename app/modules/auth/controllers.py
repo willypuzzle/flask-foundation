@@ -21,7 +21,7 @@ def login():
         flash("Logged in successfully.", "success")
         return redirect(request.args.get("next") or url_for("home.home"))
 
-    return render_template("login.html", form=form)
+    return render_template("auth/login.html", form=form)
 
 
 @mod.route("/logout")

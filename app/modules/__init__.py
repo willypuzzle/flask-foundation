@@ -11,6 +11,12 @@ def register_blueprints(app):
     app.register_blueprint(auth_mod)
     app.register_blueprint(home_mod)
 
+def register_handlers(app):
+    import app.modules.handlers as handlers;
+
+    handlers.init_app(app)
+
 def init_app(app):
     initialize_models(app)
     register_blueprints(app)
+    register_handlers(app)

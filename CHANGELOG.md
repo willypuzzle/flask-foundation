@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3
+* Added support for template directory
+* Added support for error handling
+
 ## 0.2
 * Corrected bug wsgi
 * Added support for migrations

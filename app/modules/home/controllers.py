@@ -9,4 +9,4 @@ mod = Blueprint('home', __name__, url_prefix='/')
 @mod.route('/')
 @cache.cached(timeout=1000)
 def home():
-    return render_template('index.html')
+    return render_template('home/index.html')
