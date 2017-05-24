@@ -45,3 +45,4 @@ app/static/public/*
 .idea/
 .env
 logs
+tmp
