@@ -6,8 +6,8 @@ class User(Model, UserMixin):
     id = db.Column(db.Integer(), primary_key=True)
     username = db.Column(db.String(255))
     password = db.Column(db.String(255))
-    locale = db.Column(db.String(255, default=None))
-    timezone = db.Column(db.String(255, default=None))
+    locale = db.Column(db.String(255), default=None)
+    timezone = db.Column(db.String(255), default=None)
 
     def __init__(self, username, password):
         self.username = username
