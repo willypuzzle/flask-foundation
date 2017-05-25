@@ -56,3 +56,4 @@ def create_app():
     modules.init_app(app)
 
     return app
+

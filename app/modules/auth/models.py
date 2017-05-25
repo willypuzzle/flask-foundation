@@ -40,3 +40,10 @@ class User(Model, UserMixin):
 
     def __repr__(self):
         return '<User %r>' % self.username
+
+    def __str__(self):
+        return 'User (id:%d)' % self.id;
+
+    @staticmethod
+    def get_by_primary_key(id):
+        return User.query.filter_by(id=id).one()

@@ -1,9 +1,10 @@
 from flask_babel import Babel, refresh as babel_cache_refresh
 
-_babel = None;
+_babel = None
+
 
 def init_app(app):
-    global _babel;
+    global _babel
     _babel = Babel(app)
 
     @_babel.localeselector
@@ -24,6 +25,7 @@ def init_app(app):
         user = getattr(g, 'user', None)
         if user is not None and hasattr(user, 'timezone') and user.timezone is not None and user.timezone.strip() != '':
             return user.timezone
+
 
 def refresh():
     babel_cache_refresh()

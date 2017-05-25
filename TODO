@@ -1,1 +1,1 @@
-* Add support for storing logged user in h as g.user
+* Make log rotating configurable by .env
